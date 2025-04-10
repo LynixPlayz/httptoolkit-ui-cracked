@@ -329,6 +329,14 @@ export const GlobalStyles = createGlobalStyle`
         .zone-widget .filename {
             display: none;
         }
+
+        .mtkcontrol {
+            /* Control characters have loud red backgrounds. Common in binary data, and too
+               strong for our purposes. This is visible but gentler. */
+            color: ${p => p.theme.mainColor} !important;
+            background: none !important;
+            opacity: ${p => p.theme.pillContrast};
+        }
     }
 
     .phosphor-icon {
